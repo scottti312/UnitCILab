@@ -21,14 +21,26 @@ public class CILabTest {
 
     @Test
     public void detectCapitalUseTest1() {
-        myString.setString("Google");
+        myString.setString("USA");
         Assertions.assertTrue(myString.detectCapitalUse());
-
     }
+
     @Test
     public void detectCapitalUseTest2() {
-        fail("Not yet implemented");
+        myString.setString("leetcode");
+        Assertions.assertTrue(myString.detectCapitalUse());
     }
 
+    @Test
+    public void detectCapitalUseTest3() {
+        myString.setString("Google");
+        Assertions.assertTrue(myString.detectCapitalUse());
+    }
+
+    @Test
+    public void detectCapitalUseTest4() {
+        myString.setString("GooglE");
+        Assertions.assertFalse(myString.detectCapitalUse());
+    }
 
 }
